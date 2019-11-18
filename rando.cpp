@@ -8,7 +8,6 @@
 **/
 bool Rando::isDivisibleBy(int first, int second)
 {
-
 	return true;
 }
 
@@ -26,6 +25,12 @@ bool Rando::isPalindrome(std::string eval)
  * Returns the digit {0...9} that occurs the most often within the parameter
  * or returns -1 if there is no single digit that occurs more often than all
  * the others
+ * 
+ * Test cases:
+ * 		one digit (0)
+ * 		MAX_INT
+ * 		a digit with ties ie: 111222
+ * 		10
 **/
 unsigned int Rando::mostPopularDigit(unsigned int num)
 {

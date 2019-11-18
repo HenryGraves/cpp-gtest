@@ -30,7 +30,32 @@ TEST(RandoTest, sanityCheck)
 	ASSERT_TRUE( true );
 }
 
-TEST(RandoTest, thisWillFail)
-{
-	ASSERT_TRUE( false );
+TEST(RandoTest, mostPopularZero) {
+	Rando rando;
+	ASSERT_EQ(rando.mostPopularDigit(0), 0);
+}
+
+TEST(RandoTest, mostPopularTieCase) {
+	Rando rando;
+	ASSERT_EQ(rando.mostPopularDigit(331311), -1);
+}
+
+TEST(RandoTest, mostPopularEachDigit) {
+	Rando rando;
+	ASSERT_EQ(rando.mostPopularDigit(1234567890), -1);
+}
+
+TEST(RandoTest, mostPopularOnes) {
+	Rando rando;
+	ASSERT_EQ(rando.mostPopularDigit(31311), 1);
+}
+
+TEST(RandoTest, mostPopularTwosOnly) {
+	Rando rando;
+	ASSERT_EQ(rando.mostPopularDigit(222), 2);
+}
+
+TEST(RandoTest, mostPopularCharInput) {
+	Rando rando;
+	ASSERT_EQ(rando.mostPopularDigit('A'), -1);
 }
